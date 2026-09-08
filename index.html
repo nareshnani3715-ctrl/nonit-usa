@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NonIT Requirements USA</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="container nav">
+
+    <div class="logo">
+      NonIT<span>USA</span>
+    </div>
+
+    <nav>
+      <a href="#requirements">Requirements</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="container hero-content">
+
+    <div class="badge">
+      PRIVATE SECTOR • USA
+    </div>
+
+    <h1>
+      Find Open
+      <span>NON-IT Requirements</span>
+      in the USA
+    </h1>
+
+    <p>
+      Discover private-sector staffing requirements,
+      companies and publicly available recruiting contacts.
+    </p>
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Nurse, Warehouse, Construction..."
+      >
+
+      <select id="stateFilter">
+        <option value="">All States</option>
+        <option value="TX">Texas</option>
+        <option value="CA">California</option>
+        <option value="FL">Florida</option>
+        <option value="NY">New York</option>
+        <option value="IL">Illinois</option>
+      </select>
+
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Manufacturing">Manufacturing</option>
+        <option value="Warehouse">Warehouse</option>
+        <option value="Construction">Construction</option>
+        <option value="Logistics">Logistics</option>
+        <option value="Accounting">Accounting</option>
+        <option value="Administrative">Administrative</option>
+      </select>
+
+      <button onclick="searchRequirements()">
+        Search
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="stats">
+
+  <div class="container stats-grid">
+
+    <div>
+      <strong id="totalRequirements">0</strong>
+      <span>Open Requirements</span>
+    </div>
+
+    <div>
+      <strong>7</strong>
+      <span>Categories</span>
+    </div>
+
+    <div>
+      <strong>5</strong>
+      <span>States</span>
+    </div>
+
+    <div>
+      <strong>100%</strong>
+      <span>NON-IT Focus</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="requirements" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <div>
+        <div class="small-title">
+          LIVE DATABASE
+        </div>
+
+        <h2>
+          Open Requirements
+        </h2>
+      </div>
+
+      <div id="resultCount"></div>
+
+    </div>
+
+    <div id="requirementsList" class="requirements-grid"></div>
+
+  </div>
+
+</section>
+
+
+<section id="categories" class="section light">
+
+  <div class="container">
+
+    <div class="small-title">
+      EXPLORE
+    </div>
+
+    <h2>
+      NON-IT Categories
+    </h2>
+
+    <div class="category-grid">
+
+      <div class="category">🏥 Healthcare</div>
+      <div class="category">🏭 Manufacturing</div>
+      <div class="category">📦 Warehouse</div>
+      <div class="category">🚚 Logistics</div>
+      <div class="category">🏗️ Construction</div>
+      <div class="category">💼 Accounting</div>
+      <div class="category">📋 Administrative</div>
+      <div class="category">🛠️ Skilled Trades</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="about" class="about">
+
+  <div class="container">
+
+    <h2>
+      Built for NON-IT staffing
+    </h2>
+
+    <p>
+      This platform is designed to help recruiters and staffing
+      companies discover private-sector NON-IT requirements and
+      identify publicly available professional contacts.
+    </p>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="container">
+
+    <div class="logo">
+      NonIT<span>USA</span>
+    </div>
+
+    <p>
+      Private-sector NON-IT requirements platform.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<div id="modal" class="modal">
+
+  <div class="modal-content">
+
+    <button class="close" onclick="closeModal()">
+      ×
+    </button>
+
+    <div id="modalContent"></div>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
